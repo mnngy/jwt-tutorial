@@ -3,19 +3,16 @@ package com.example.jwttutorial.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
 @Getter
 @Setter
 @ToString
-public class User {
+public class Member {
 
     @Id
-    @Column
+    @Column(name = "member_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
+    private Long id;
 
     @Column
     private String username;
