@@ -3,9 +3,13 @@ package com.example.jwttutorial.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
+@ToString
 public class User {
 
     @Id
@@ -24,7 +28,4 @@ public class User {
 
     @Column
     private boolean activated;
-
-    @OneToOne(mappedBy = "user")
-    private UserAuthority userAuthority;
 }

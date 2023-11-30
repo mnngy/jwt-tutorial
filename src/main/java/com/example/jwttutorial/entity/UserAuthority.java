@@ -3,9 +3,13 @@ package com.example.jwttutorial.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
+@ToString
 public class UserAuthority {
 
     @Id
@@ -13,7 +17,7 @@ public class UserAuthority {
     @Column(name = "user_authority_id")
     private Long id;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
