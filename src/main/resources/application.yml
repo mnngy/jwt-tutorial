@@ -27,3 +27,8 @@ logging:
   level:
     com.example: DEBUG
 
+jwt:
+  header: Authorization
+  secrete: aGVsbG8tbXktbmFtZS1pcy1taW4taW5neXUtaGVsbG8tbXktbmFtZS1pcy1taW4taW5neXUtaGVsbG8tbXktbgo=
+  token-validity-in-seconds: 86400
+
